@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/selectableItemBackground"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardUseCompatPadding="true"
+    app:cardPreventCornerOverlap="false"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_margin="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/company_logo"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            app:layout_constraintBottom_toTopOf="@+id/company_rating"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/company_name"
+            android:paddingLeft="15dp"
+            android:paddingTop="40dp"
+            tools:layout_editor_absoluteX="28dp"></ImageView>
+
+        <TextView
+            android:id="@+id/company_rating"
+            android:text="5.0★"
+            android:textColor="#0C981F"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            app:layout_constraintStart_toStartOf="@+id/company_logo"
+            app:layout_constraintBottom_toBottomOf="@id/vacancy_address"
+            app:layout_constraintTop_toBottomOf="@id/company_logo"
+            app:layout_constraintEnd_toEndOf="@id/company_logo"
+            tools:layout_editor_absoluteX="90dp"></TextView>
+
+        <TextView
+            app:layout_constraintVertical_chainStyle="packed"
+            android:id="@+id/company_name"
+            android:text="Google"
+            android:textSize="20sp"
+            android:fontFamily="@font/lato_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/vacancy_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/company_logo"
+            tools:layout_editor_absoluteX="283dp"></TextView>
+
+
+        <TextView
+            android:id="@+id/vacancy_title"
+            android:text="Junior Software Engineering"
+            android:fontFamily="@font/lato_bold"
+            android:letterSpacing="-0.05"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/vacancy_address"
+            app:layout_constraintTop_toBottomOf="@+id/company_name"
+            app:layout_constraintLeft_toRightOf="@id/company_logo"
+            tools:layout_editor_absoluteX="283dp"></TextView>
+
+        <TextView
+            android:id="@+id/vacancy_address"
+            android:text="Brussels, Belgium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/vacancy_title"
+            app:layout_constraintLeft_toRightOf="@id/company_logo"
+            app:layout_constraintBottom_toTopOf="@id/guideline1"
+            tools:layout_editor_absoluteX="283dp"></TextView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.20"
+            />
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#BEAEAE"
+            app:layout_constraintTop_toTopOf="@id/guideline1" />
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About the job"
+                android:paddingTop="20dp"
+                android:paddingLeft="15dp"
+                android:letterSpacing="-0.05"
+                android:fontFamily="@font/lato_bold"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/guideline1">
+            </TextView>
+        <TextView
+            android:id="@+id/vacancy_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.02"
+            android:paddingLeft="30dp"
+            android:paddingTop="20dp"
+            android:paddingRight="30dp"
+            android:lineSpacingExtra="1.4dp"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="16sp"
+            android:textColor="#A4A4A4"
+            android:text="@string/vacancy_description"
+            app:layout_constraintTop_toBottomOf="@+id/about"
+            app:layout_constraintLeft_toLeftOf="parent">
+        </TextView>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75"
+            />
+        <TextView
+            android:id="@+id/bot_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#BEAEAE"
+            app:layout_constraintTop_toTopOf="@id/guideline2" />
+        <androidx.appcompat.widget.AppCompatButton
+            app:layout_constraintTop_toTopOf="@id/bot_line"
+            app:layout_constraintLeft_toLeftOf="@id/bot_line"
+            app:layout_constraintBottom_toBottomOf="@id/bot_line"
+            app:layout_constraintRight_toRightOf="@id/bot_line"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="83% Match!"
+            android:drawableLeft="@drawable/ic_favorite_24px"
+            android:elevation="2dp"
+            android:textColor="@color/white"
+            android:background="@drawable/gradient_ai_score"
+            android:padding="6dp"
+            android:layout_margin="4dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
