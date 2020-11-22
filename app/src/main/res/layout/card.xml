@@ -89,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.20"
+            app:layout_constraintGuide_percent="0.23"
             />
 
         <TextView
@@ -121,13 +121,14 @@
             android:paddingLeft="30dp"
             android:paddingTop="20dp"
             android:paddingRight="30dp"
-            android:lineSpacingExtra="1.4dp"
+            android:lineSpacingExtra="1.2dp"
             android:fontFamily="@font/lato_regular"
             android:textSize="16sp"
             android:textColor="#A4A4A4"
             android:text="@string/vacancy_description"
             app:layout_constraintTop_toBottomOf="@+id/about"
-            app:layout_constraintLeft_toLeftOf="parent">
+            app:layout_constraintLeft_toLeftOf="parent"
+            >
         </TextView>
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
@@ -145,6 +146,7 @@
             android:background="#BEAEAE"
             app:layout_constraintTop_toTopOf="@id/guideline2" />
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ai_match"
             app:layout_constraintTop_toTopOf="@id/bot_line"
             app:layout_constraintLeft_toLeftOf="@id/bot_line"
             app:layout_constraintBottom_toBottomOf="@id/bot_line"
@@ -153,14 +155,82 @@
             android:layout_height="wrap_content"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
+            android:fontFamily="@font/lato_regular"
             android:text="83% Match!"
-            android:drawableLeft="@drawable/ic_favorite_24px"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/ic_white_heart_24px"
             android:elevation="2dp"
             android:textColor="@color/white"
             android:background="@drawable/gradient_ai_score"
             android:padding="6dp"
             android:layout_margin="4dp"
             />
+        <ImageView
+            android:id="@+id/duration_ic_id"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ai_match"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/ic_event_available_24px"></ImageView>
+    <TextView
+        android:textColor="#A4A4A4"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:layout_marginBottom="2dp"
+        android:fontFamily="@font/lato_regular"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toRightOf="@id/duration_ic_id"
+        app:layout_constraintBottom_toBottomOf="@id/duration_ic_id"
+        android:text="Sep 2020 - Jan 2021"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></TextView>
+        <ImageView
+            android:id="@+id/salary_ic_id"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/duration_ic_id"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/ic_euro_symbol_24px"></ImageView>
+        <TextView
+            android:textColor="#A4A4A4"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toRightOf="@id/salary_ic_id"
+            app:layout_constraintBottom_toBottomOf="@id/salary_ic_id"
+            android:text="1.500 EUR - 1700 EUR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></TextView>
+        <ImageView
+            android:id="@+id/place_ic_id"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/salary_ic_id"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/ic_location_on_24px"></ImageView>
+        <TextView
+            android:textColor="#A4A4A4"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:layout_marginBottom="2dp"
+            android:fontFamily="@font/lato_regular"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toRightOf="@id/place_ic_id"
+            app:layout_constraintBottom_toBottomOf="@id/place_ic_id"
+            android:text="3 miles away"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></TextView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

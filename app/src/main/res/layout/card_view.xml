@@ -10,7 +10,7 @@
     app:cardUseCompatPadding="true"
     app:cardPreventCornerOverlap="false"
     app:cardCornerRadius="8dp"
-    app:cardBackgroundColor="@android:color/white">
+    app:cardBackgroundColor="@android:color/transparent">
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/item_image"

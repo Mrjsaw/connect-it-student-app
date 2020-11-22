@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), CardStackListener {
 
     override fun onCardDisappeared(view: View, position: Int) {
         val textView = view.findViewById<TextView>(R.id.item_name)
-        Log.d("CardStackView", "onCardDisappeared: ($position) ${textView.text}")
+        //Log.d("CardStackView", "onCardDisappeared: ($position) ${textView.text}")
     }
 
     override fun onCardDragging(direction: Direction, ratio: Float) {

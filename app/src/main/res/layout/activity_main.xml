@@ -4,13 +4,107 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/darker_gray"
+    android:background="#E6E6E6"
     tools:context=".ui.main.MainActivity">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_stack_mid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
 
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:background="@drawable/ic_menu_24px"
+        ></ImageView>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_stack0"
+        app:layout_constraintTop_toTopOf="@id/menu"
+        app:layout_constraintLeft_toRightOf="@id/menu"
+        app:layout_constraintRight_toLeftOf="@id/chat"
+        android:background="@drawable/ic_group_10"
+        android:layout_marginBottom="3dp"
+        ></ImageView>
+    <ImageView
+        android:id="@+id/chat"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/ic_chat_24px"
+        ></ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D8D8D8"
+        app:layout_constraintTop_toTopOf="@id/guideline_stack0" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_stack0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.09"
+        />
     <com.yuyakaido.android.cardstackview.CardStackView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.83"
+        app:layout_constraintTop_toBottomOf="@id/guideline_stack0"
+        app:layout_constraintBottom_toTopOf="@id/guideline_stack"
         android:id="@+id/card_stack_view">
 
     </com.yuyakaido.android.cardstackview.CardStackView>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_stack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90"
+        />
+    <at.markushi.ui.CircleButton
+        android:id="@+id/dislike_but"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_stack"
+        android:layout_marginLeft="85dp"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:src="@drawable/ic_close_24px"
+        app:cb_color="@color/white"
+        android:textAlignment="center"
+        app:cb_pressedRingWidth="8dp"
+        />
+    <at.markushi.ui.CircleButton
+        android:id="@+id/info_but"
+        app:layout_constraintLeft_toRightOf="@id/dislike_but"
+        app:layout_constraintRight_toLeftOf="@id/like_but"
+        app:layout_constraintTop_toBottomOf="@id/guideline_stack"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:src="@drawable/ic_star_24px"
+        app:cb_color="@color/white"
+        android:textAlignment="center"
+        app:cb_pressedRingWidth="8dp" />
+    <at.markushi.ui.CircleButton
+        android:id="@+id/like_but"
+        android:layout_marginRight="85dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_stack"
+        android:textAlignment="center"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:src="@drawable/ic_favorite_24px"
+        app:cb_color="@color/white"
+        app:cb_pressedRingWidth="8dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
