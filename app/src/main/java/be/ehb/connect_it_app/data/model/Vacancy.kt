@@ -1,11 +1,17 @@
 package be.ehb.connect_it_app.data.model
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "vacancy_table")
 data class Vacancy(
-    val id: Long = counter++,
-    val name: String,
-    val city: String
-) {
-    companion object {
-        private var counter = 0L
-    }
-}
+        @PrimaryKey(autoGenerate = true)
+        val id: Int,
+        val companyDescription: String?,
+        val companyName: String?,
+        val duration: String?,
+        val jobDescription: String?,
+        val location: String?,
+        val title: String?,
+        val yourProfile: String?
+)

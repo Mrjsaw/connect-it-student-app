@@ -100,9 +100,9 @@ class MainActivity : AppCompatActivity(), CardStackListener {
 
     private fun createVacancies(): List<Vacancy> {
         val vacancies = ArrayList<Vacancy>()
-        vacancies.add(Vacancy(name = "Google", city="Brussels, Belgium"))
-        vacancies.add(Vacancy(name = "Microsoft", city="London, UK"))
-        vacancies.add(Vacancy(name = "Amazon", city="New York, USA"))
+        vacancies.add(Vacancy(id=0,companyName = "Google", location= "Brussels, Belgium",companyDescription = null,duration = null,jobDescription = null,title=null,yourProfile = null))
+        vacancies.add(Vacancy(id=1,companyName = "Microsoft", location="London, UK",companyDescription = null,duration = null,jobDescription = null,title=null,yourProfile = null))
+        vacancies.add(Vacancy(id=2,companyName = "Amazon", location="New York, USA",companyDescription = null,duration = null,jobDescription = null,title=null,yourProfile = null))
         return vacancies
     }
 }

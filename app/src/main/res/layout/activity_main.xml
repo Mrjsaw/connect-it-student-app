@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E6E6E6"
-    tools:context=".ui.main.MainActivity">
+    tools:context=".ui.main.MainActivity"
+    android:fitsSystemWindows="false">
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_stack_mid"
         android:layout_width="wrap_content"

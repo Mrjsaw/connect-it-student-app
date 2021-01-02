@@ -20,8 +20,10 @@
 
         <ImageView
             android:id="@+id/company_logo"
-            android:layout_width="128dp"
-            android:layout_height="128dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintWidth_percent="0.25"
             app:layout_constraintBottom_toTopOf="@+id/company_rating"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/company_name"
@@ -89,7 +91,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.23"
+            app:layout_constraintGuide_percent="0.25"
             />
 
         <TextView
@@ -116,35 +118,32 @@
         <TextView
             android:id="@+id/vacancy_description"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:letterSpacing="0.02"
             android:paddingLeft="30dp"
             android:paddingTop="20dp"
             android:paddingRight="30dp"
             android:lineSpacingExtra="1.2dp"
             android:fontFamily="@font/lato_regular"
-            android:textSize="16sp"
             android:textColor="#A4A4A4"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="44sp"
+            android:autoSizeStepGranularity="2sp"
             android:text="@string/vacancy_description"
             app:layout_constraintTop_toBottomOf="@+id/about"
             app:layout_constraintLeft_toLeftOf="parent"
             >
         </TextView>
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.75"
-            />
         <TextView
             android:id="@+id/bot_line"
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
+            android:paddingTop="10dp"
             android:background="#BEAEAE"
-            app:layout_constraintTop_toTopOf="@id/guideline2" />
+            app:layout_constraintTop_toBottomOf="@id/vacancy_description" />
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/ai_match"
             app:layout_constraintTop_toTopOf="@id/bot_line"
@@ -205,7 +204,7 @@
             android:textSize="16dp"
             app:layout_constraintLeft_toRightOf="@id/salary_ic_id"
             app:layout_constraintBottom_toBottomOf="@id/salary_ic_id"
-            android:text="1.500 EUR - 1700 EUR"
+            android:text="1.500 EUR - 1.700 EUR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             ></TextView>
@@ -232,7 +231,4 @@
             android:layout_height="wrap_content"
             ></TextView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 </androidx.cardview.widget.CardView>

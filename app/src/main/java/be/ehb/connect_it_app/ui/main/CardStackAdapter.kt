@@ -23,8 +23,8 @@ class CardStackAdapter (
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val vacancy = vacancies[position]
-        holder.name.text =vacancy.name
-        holder.city.text = vacancy.city
+        holder.name.text = vacancy.companyName
+        holder.city.text = vacancy.location
         var draw = R.drawable.pngegg
         if (position == 1) {
             draw = R.drawable.temp_2
@@ -36,7 +36,7 @@ class CardStackAdapter (
             .load(draw)
             .into(holder.image)
         holder.itemView.setOnClickListener { v ->
-            Toast.makeText(v.context, vacancy.name, Toast.LENGTH_SHORT).show()
+            Toast.makeText(v.context, vacancy.companyName, Toast.LENGTH_SHORT).show()
         }
     }
 
